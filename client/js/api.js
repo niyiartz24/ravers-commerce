@@ -11,13 +11,9 @@
  * domains, set window.RAVERS_API_BASE_URL to your backend's full API URL,
  * e.g. window.RAVERS_API_BASE_URL = "https://ravers-api.onrender.com/api";
  */
-const API_BASE_URL = (() => {
-  const { hostname, origin } = window.location;
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return ' https://ravers-commerce.onrender.com/api';
-  }
-  return window.RAVERS_API_BASE_URL || `${origin}/api`;
-})();
+const API_BASE_URL =
+' https://ravers-commerce.onrender.com/api';
+  
 
 const TOKEN_KEY = 'ravers_token';
 
