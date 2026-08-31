@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — RAVERS</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="wordmark">RAVERS</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="shop.html">Shop</a>
+      <a href="custom.html">Custom Studio</a>
+      <a href="track-order.html">Track Order</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-link" id="account-link" aria-label="Account"><span class="account-label">Account</span></a>
+      <a href="cart.html" class="icon-link cart-link" aria-label="Cart">Cart <span class="cart-count" id="cart-count">0</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="container">
+    <div class="page-header">
+      <h1>Checkout</h1>
+    </div>
+
+    <div class="checkout-layout" id="checkout-layout">
+      <form id="checkout-form" novalidate>
+        <div class="card">
+          <h3 style="margin-bottom:20px;">Delivery Details</h3>
+
+          <div class="form-row">
+            <label class="form-label" for="checkout-name">Full Name</label>
+            <input class="form-input" id="checkout-name" name="name" required>
+          </div>
+
+          <div class="form-row form-row--split">
+            <div>
+              <label class="form-label" for="checkout-email">Email</label>
+              <input class="form-input" id="checkout-email" name="email" type="email" required>
+            </div>
+            <div>
+              <label class="form-label" for="checkout-phone">Phone Number</label>
+              <input class="form-input" id="checkout-phone" name="phone" type="tel" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="checkout-address">Delivery Address</label>
+            <input class="form-input" id="checkout-address" name="address" required>
+          </div>
+
+          <div class="form-row form-row--split">
+            <div>
+              <label class="form-label" for="checkout-city">City</label>
+              <input class="form-input" id="checkout-city" name="city" required>
+            </div>
+            <div>
+              <label class="form-label" for="checkout-state">State</label>
+              <input class="form-input" id="checkout-state" name="state" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label" for="checkout-notes">Order Notes <span class="optional">(optional)</span></label>
+            <textarea class="form-textarea" id="checkout-notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Place Order</button>
+          <p class="form-hint" style="text-align:center;margin-top:12px;">Payment runs in development mode — orders are marked paid automatically until live Paystack keys are added.</p>
+        </div>
+      </form>
+
+      <aside class="checkout-summary card">
+        <h3 style="margin-bottom:16px;">Order Summary</h3>
+        <div id="checkout-items"></div>
+        <div class="summary-row" style="margin-top:12px;border-top:1px solid var(--color-border);padding-top:12px;">
+          <span>Subtotal</span><span id="checkout-subtotal">—</span>
+        </div>
+        <div class="summary-row"><span>Delivery</span><span id="checkout-delivery">—</span></div>
+        <div class="summary-row summary-row--total"><span>Total</span><span id="checkout-total">—</span></div>
+      </aside>
+    </div>
+
+    <div class="confirmation-panel" id="checkout-confirmation" hidden></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="wordmark">RAVERS</p>
+      <p>Custom clothing for people who wear their identity.</p>
+    </div>
+    <nav class="site-footer__links">
+      <div>
+        <h3>Shop</h3>
+        <a href="shop.html">All Products</a>
+        <a href="custom.html">Custom Studio</a>
+        <a href="track-order.html">Track Order</a>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <a href="login.html">Login</a>
+        <a href="register.html">Create Account</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:ravers.ng@gmail.com">ravers.ng@gmail.com</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>&copy; 2026 RAVERS. All rights reserved. Built by Synthaxlab Technologies</p>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/custom-order.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/tracking.js"></script>
+</body>
+</html>

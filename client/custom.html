@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Studio — RAVERS</title>
+<meta name="description" content="Submit a custom clothing request to RAVERS — choose a garment, describe your design, and get a quote.">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="wordmark">RAVERS</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="shop.html">Shop</a>
+      <a href="custom.html" aria-current="page">Custom Studio</a>
+      <a href="track-order.html">Track Order</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-link" id="account-link" aria-label="Account"><span class="account-label">Account</span></a>
+      <a href="cart.html" class="icon-link cart-link" aria-label="Cart">Cart <span class="cart-count" id="cart-count">0</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="container" id="studio-root" style="max-width:760px;">
+    <div class="page-header">
+      <h1>Custom Studio</h1>
+      <p class="text-muted">Tell us what you want built. This is a request form, not a live preview — our team will follow up with a quote and confirm details before production starts.</p>
+    </div>
+
+    <div id="studio-wizard">
+      <nav class="stepper" aria-label="Custom order steps">
+        <div class="stepper__step" data-step="1"><span class="stepper__step-number">1</span> Type</div>
+        <div class="stepper__connector"></div>
+        <div class="stepper__step" data-step="2"><span class="stepper__step-number">2</span> Options</div>
+        <div class="stepper__connector"></div>
+        <div class="stepper__step" data-step="3"><span class="stepper__step-number">3</span> Design</div>
+        <div class="stepper__connector"></div>
+        <div class="stepper__step" data-step="4"><span class="stepper__step-number">4</span> Reference</div>
+        <div class="stepper__connector"></div>
+        <div class="stepper__step" data-step="5"><span class="stepper__step-number">5</span> Contact</div>
+        <div class="stepper__connector"></div>
+        <div class="stepper__step" data-step="6"><span class="stepper__step-number">6</span> Review</div>
+      </nav>
+
+      <!-- Step 1: Clothing type -->
+      <div class="studio-step" data-step="1">
+        <h3>What are we making?</h3>
+        <div class="clothing-type-grid" style="margin-top:16px;">
+          <button type="button" class="clothing-type-card js-clothing-type" data-type="T-shirt" aria-pressed="false">T-Shirt</button>
+          <button type="button" class="clothing-type-card js-clothing-type" data-type="Hoodie" aria-pressed="false">Hoodie</button>
+          <button type="button" class="clothing-type-card js-clothing-type" data-type="Shirt" aria-pressed="false">Shirt</button>
+          <button type="button" class="clothing-type-card js-clothing-type" data-type="Other" aria-pressed="false">Other</button>
+        </div>
+        <p class="form-error-text js-step-error" hidden></p>
+        <div class="studio-step__nav">
+          <span></span>
+          <button type="button" class="btn btn--primary js-step-next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Options -->
+      <div class="studio-step" data-step="2">
+        <h3>Options</h3>
+        <div class="product-detail__section" style="margin-top:16px;">
+          <span class="form-label">Size</span>
+          <div class="choice-group">
+            <button type="button" class="choice-pill js-size-choice" data-size="XS" aria-pressed="false">XS</button>
+            <button type="button" class="choice-pill js-size-choice" data-size="S" aria-pressed="false">S</button>
+            <button type="button" class="choice-pill js-size-choice" data-size="M" aria-pressed="false">M</button>
+            <button type="button" class="choice-pill js-size-choice" data-size="L" aria-pressed="false">L</button>
+            <button type="button" class="choice-pill js-size-choice" data-size="XL" aria-pressed="false">XL</button>
+            <button type="button" class="choice-pill js-size-choice" data-size="XXL" aria-pressed="false">XXL</button>
+          </div>
+        </div>
+        <div class="product-detail__section">
+          <span class="form-label">Base Color</span>
+          <div class="choice-group">
+            <button type="button" class="choice-pill js-color-choice" data-color="Black" aria-pressed="false">Black</button>
+            <button type="button" class="choice-pill js-color-choice" data-color="White" aria-pressed="false">White</button>
+            <button type="button" class="choice-pill js-color-choice" data-color="Navy" aria-pressed="false">Navy</button>
+            <button type="button" class="choice-pill js-color-choice" data-color="Grey" aria-pressed="false">Grey</button>
+            <button type="button" class="choice-pill js-color-choice" data-color="Other (see notes)" aria-pressed="false">Other</button>
+          </div>
+        </div>
+        <div class="product-detail__section">
+          <span class="form-label">Fit / Style <span class="optional">(if applicable)</span></span>
+          <div class="choice-group">
+            <button type="button" class="choice-pill js-fit-choice" data-fit="Regular" aria-pressed="false">Regular</button>
+            <button type="button" class="choice-pill js-fit-choice" data-fit="Slim" aria-pressed="false">Slim</button>
+            <button type="button" class="choice-pill js-fit-choice" data-fit="Oversized" aria-pressed="false">Oversized</button>
+          </div>
+        </div>
+        <p class="form-error-text js-step-error" hidden></p>
+        <div class="studio-step__nav">
+          <button type="button" class="btn btn--ghost js-step-back">Back</button>
+          <button type="button" class="btn btn--primary js-step-next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Design description -->
+      <div class="studio-step" data-step="3">
+        <h3>Describe the design</h3>
+        <div class="form-row" style="margin-top:16px;">
+          <label class="form-label" for="design-description">What do you want made?</label>
+          <textarea class="form-textarea" id="design-description" rows="5" placeholder="Describe the design, placement, colors, references — as much detail as you can give."></textarea>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="design-notes">Additional Notes <span class="optional">(optional)</span></label>
+          <textarea class="form-textarea" id="design-notes" rows="3" placeholder="Anything else we should know — deadlines, budget range, etc."></textarea>
+        </div>
+        <p class="form-error-text js-step-error" hidden></p>
+        <div class="studio-step__nav">
+          <button type="button" class="btn btn--ghost js-step-back">Back</button>
+          <button type="button" class="btn btn--primary js-step-next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Reference upload -->
+      <div class="studio-step" data-step="4">
+        <h3>Upload a reference <span class="optional">(optional)</span></h3>
+        <p class="text-muted">A photo, sketch, or PDF helps our team understand what you're going for.</p>
+        <div class="upload-dropzone" id="upload-dropzone" style="margin-top:16px;">
+          <p style="font-weight:600;margin-bottom:4px;">Click to upload a file</p>
+          <p class="text-muted" style="margin:0;font-size:0.8125rem;">JPG, PNG, WEBP, or PDF — up to 5MB</p>
+          <input type="file" id="reference-file-input" accept=".jpg,.jpeg,.png,.webp,.pdf" class="visually-hidden">
+        </div>
+        <div class="upload-preview" id="upload-preview" hidden></div>
+        <p class="form-error-text js-step-error" hidden></p>
+        <div class="studio-step__nav">
+          <button type="button" class="btn btn--ghost js-step-back">Back</button>
+          <button type="button" class="btn btn--primary js-step-next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Contact details -->
+      <div class="studio-step" data-step="5">
+        <h3>Your contact details</h3>
+        <div class="form-row" style="margin-top:16px;">
+          <label class="form-label" for="studio-name">Full Name</label>
+          <input class="form-input" id="studio-name" type="text">
+        </div>
+        <div class="form-row form-row--split">
+          <div>
+            <label class="form-label" for="studio-email">Email</label>
+            <input class="form-input" id="studio-email" type="email">
+          </div>
+          <div>
+            <label class="form-label" for="studio-phone">Phone Number</label>
+            <input class="form-input" id="studio-phone" type="tel">
+          </div>
+        </div>
+        <p class="form-error-text js-step-error" hidden></p>
+        <div class="studio-step__nav">
+          <button type="button" class="btn btn--ghost js-step-back">Back</button>
+          <button type="button" class="btn btn--primary js-step-next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 6: Review -->
+      <div class="studio-step" data-step="6">
+        <h3>Review your request</h3>
+        <div class="review-summary" id="review-summary" style="margin-top:16px;"></div>
+        <p class="form-error-text alert alert--error" id="studio-submit-error" hidden style="margin-top:16px;"></p>
+        <div class="studio-step__nav">
+          <button type="button" class="btn btn--ghost js-step-back">Back</button>
+          <button type="button" class="btn btn--primary" id="studio-submit-btn">Submit Request</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirmation-panel" id="studio-confirmation" hidden>
+      <p class="eyebrow">Request Submitted</p>
+      <h1>We've got it.</h1>
+      <p class="text-muted">Our team will review your request and follow up by email with a quote. Save your reference number to track its status.</p>
+      <p class="confirmation-panel__ref" id="confirmation-reference"></p>
+      <div class="hero__actions" style="justify-content:center;margin-top:24px;">
+        <a href="track-order.html" class="btn btn--outline">Track This Request</a>
+        <a href="shop.html" class="btn btn--primary">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="wordmark">RAVERS</p>
+      <p>Custom clothing for people who wear their identity.</p>
+    </div>
+    <nav class="site-footer__links">
+      <div>
+        <h3>Shop</h3>
+        <a href="shop.html">All Products</a>
+        <a href="custom.html">Custom Studio</a>
+        <a href="track-order.html">Track Order</a>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <a href="login.html">Login</a>
+        <a href="register.html">Create Account</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:ravers.ng@gmail.com">ravers.ng@gmail.com</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>&copy; 2026 RAVERS. All rights reserved. Built by Synthaxlab Technologies</p>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/custom-order.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/tracking.js"></script>
+</body>
+</html>

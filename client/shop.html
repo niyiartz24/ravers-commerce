@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — RAVERS</title>
+<meta name="description" content="Browse the full RAVERS ready-made collection — tees, hoodies, shirts, jackets, sets, and accessories.">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="wordmark">RAVERS</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="custom.html">Custom Studio</a>
+      <a href="track-order.html">Track Order</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-link" id="account-link" aria-label="Account"><span class="account-label">Account</span></a>
+      <a href="cart.html" class="icon-link cart-link" aria-label="Cart">Cart <span class="cart-count" id="cart-count">0</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="container">
+    <div class="page-header">
+      <h1>Shop</h1>
+      <p class="text-muted">The full ready-made collection. Looking for something specific? Try the <a href="custom.html" style="color:var(--color-accent);font-weight:600;">Custom Studio</a>.</p>
+    </div>
+
+    <div class="shop-toolbar">
+      <div class="shop-search">
+        <input type="search" class="form-input" id="shop-search-input" placeholder="Search products" aria-label="Search products">
+      </div>
+      <div class="category-filters" id="category-filters">
+        <button type="button" class="choice-pill js-category-filter" data-category="" aria-pressed="true">All</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="T-Shirts" aria-pressed="false">T-Shirts</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="Hoodies" aria-pressed="false">Hoodies</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="Shirts" aria-pressed="false">Shirts</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="Jackets" aria-pressed="false">Jackets</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="Sets" aria-pressed="false">Sets</button>
+        <button type="button" class="choice-pill js-category-filter" data-category="Accessories" aria-pressed="false">Accessories</button>
+      </div>
+    </div>
+
+    <p class="product-count" id="product-count"></p>
+
+    <div class="product-grid" id="product-grid"></div>
+    <div class="empty-state" id="shop-empty" hidden>
+      <h3>No products found</h3>
+      <p>Try a different search term or category.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="wordmark">RAVERS</p>
+      <p>Custom clothing for people who wear their identity.</p>
+    </div>
+    <nav class="site-footer__links">
+      <div>
+        <h3>Shop</h3>
+        <a href="shop.html">All Products</a>
+        <a href="custom.html">Custom Studio</a>
+        <a href="track-order.html">Track Order</a>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <a href="login.html">Login</a>
+        <a href="register.html">Create Account</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:ravers.ng@gmail.com">ravers.ng@gmail.com</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </nav>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>&copy; 2026 RAVERS. All rights reserved. Built by Synthaxlab Technologies</p>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/custom-order.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/tracking.js"></script>
+</body>
+</html>

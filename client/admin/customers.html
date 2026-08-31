@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customers — RAVERS Admin</title>
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar__brand">
+      <div>
+        <p class="wordmark">RAVERS</p>
+        <span class="eyebrow">Admin</span>
+      </div>
+      <button type="button" class="admin-nav-toggle" id="admin-nav-toggle">Menu</button>
+    </div>
+    <nav class="admin-nav" id="admin-nav">
+      <a href="index.html">Dashboard</a>
+      <a href="products.html">Products</a>
+      <a href="orders.html">Orders</a>
+      <a href="custom-orders.html">Custom Requests</a>
+      <a href="customers.html" aria-current="page">Customers</a>
+    </nav>
+    <div class="admin-sidebar__foot">
+      <div class="admin-sidebar__user">
+        <strong id="admin-user-name">—</strong>
+        Administrator
+      </div>
+      <button type="button" class="btn btn--ghost btn--sm btn--block" data-logout>Log Out</button>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>Customers</h1>
+        <p>Registered accounts and their order history.</p>
+      </div>
+      <a href="../index.html" class="link-action">View Storefront &rarr;</a>
+    </div>
+
+    <div class="admin-content" id="admin-customers-root">
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Name</th><th>Email</th><th>Joined</th><th>Orders</th><th>Custom Requests</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="customers-table-body">
+            <tr><td colspan="6" class="cell-muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

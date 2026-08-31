@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+npm-debug.log*
+
+# Local dev file uploads (keep the folder, ignore its contents)
+server/uploads/*
+!server/uploads/.gitkeep
+!server/uploads/custom-orders/.gitkeep
+
+.DS_Store
+*.log
