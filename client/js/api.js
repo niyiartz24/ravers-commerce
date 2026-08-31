@@ -14,7 +14,7 @@
 const API_BASE_URL = (() => {
   const { hostname, origin } = window.location;
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return 'http://localhost:5000/api';
+    return ' https://ravers-commerce.onrender.com/api';
   }
   return window.RAVERS_API_BASE_URL || `${origin}/api`;
 })();
